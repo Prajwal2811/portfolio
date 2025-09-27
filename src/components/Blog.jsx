@@ -52,7 +52,7 @@ export default function Blog() {
           </motion.p>
 
           <motion.a
-            href="https://yourblogurl.com" // 👉 replace with your blog link
+            href="https://insanewriteups.blogspot.com/" // 👉 replace with your blog link
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
