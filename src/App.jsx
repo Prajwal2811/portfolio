@@ -7,6 +7,7 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Blog from './components/Blog';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -41,6 +42,8 @@ export default function App() {
         <section id="experience" className="mt-20"><Experience /></section>
         <section id="skills" className="mt-20"><Skills /></section>
         <section id="projects" className="mt-20"><Projects /></section>
+        {/* New Blog Section */}
+        <section id="blog" className="mt-20"><Blog /></section>
         <section id="contact" className="mt-20 pb-24"><Contact /></section>
       </main>
       <Footer />
