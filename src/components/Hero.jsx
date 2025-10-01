@@ -13,30 +13,34 @@ export default function Hero() {
   const [currentRole, setCurrentRole] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [typing, setTyping] = useState(true);
+  const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
-    let typingTimeout;
-    if (typing) {
-      const fullText = roles[currentRole];
-      setDisplayedText(fullText.slice(0, displayedText.length + 1));
-      if (displayedText.length + 1 === fullText.length) {
-        setTyping(false);
-        typingTimeout = setTimeout(() => setTyping(false), 1000);
+    const fullText = roles[currentRole];
+
+    const timeout = setTimeout(() => {
+      if (typing) {
+        // Typing characters
+        setDisplayedText(fullText.slice(0, charIndex + 1));
+        setCharIndex((prev) => prev + 1);
+
+        if (charIndex + 1 === fullText.length) {
+          setTyping(false); // start deleting after full text
+        }
       } else {
-        typingTimeout = setTimeout(() => {}, 150);
+        // Deleting characters
+        setDisplayedText(fullText.slice(0, charIndex - 1));
+        setCharIndex((prev) => prev - 1);
+
+        if (charIndex - 1 === 0) {
+          setTyping(true);
+          setCurrentRole((prev) => (prev + 1) % roles.length); // next role
+        }
       }
-    } else {
-      if (displayedText.length > 0) {
-        typingTimeout = setTimeout(() => {
-          setDisplayedText(displayedText.slice(0, displayedText.length - 1));
-        }, 150);
-      } else {
-        setTyping(true);
-        setCurrentRole((prev) => (prev + 1) % roles.length);
-      }
-    }
-    return () => clearTimeout(typingTimeout);
-  }, [displayedText, typing, currentRole]);
+    }, typing ? 150 : 50); // slower typing, faster deleting
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, typing, currentRole]);
 
   return (
     <motion.div
@@ -80,9 +84,9 @@ export default function Hero() {
         </motion.div>
 
         <motion.div className="flex items-center gap-4 mt-6 text-gray-700 dark:text-gray-300">
-          <motion.a href="https://github.com/Prajwal2811"><FaGithub size={22} /></motion.a>
-          <motion.a href="https://linkedin.com/in/prajwal-ingole-948b25180"><FaLinkedin size={22} /></motion.a>
-          <motion.a href="https://www.instagram.com/its_me_half_writtensoul/"><FaInstagram size={22} /></motion.a>
+          <motion.a target="_blank" href="https://github.com/Prajwal2811"><FaGithub size={22} /></motion.a>
+          <motion.a target="_blank" href="https://linkedin.com/in/prajwal-ingole-948b25180"><FaLinkedin size={22} /></motion.a>
+          <motion.a target="_blank" href="https://www.instagram.com/its_me_half_writtensoul/"><FaInstagram size={22} /></motion.a>
         </motion.div>
       </div>
 

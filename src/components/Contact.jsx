@@ -23,38 +23,66 @@ export default function Contact() {
       viewport={{ once: true }}
       className="grid md:grid-cols-2 gap-8 items-start"
     >
+      {/* Left Contact Card */}
       <motion.div
-        className="bg-gray-200/10 dark:bg-gray-800/30 p-8 rounded-2xl transition-colors duration-500"
-        initial={{ x: -20, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-          Let's grab a chai and build something
-        </h3>
-        <p className="mt-3 text-gray-700 dark:text-gray-300">
-          If you have an idea, a project, or just want to chat over a virtual
-          chai ☕, drop me a message. I’ll get back to you within a few days!
-        </p>
-        <div className="mt-6 flex flex-col gap-3 text-gray-700 dark:text-gray-300">
-          <a
-            href="mailto:prajwalingole280@gmail.com"
-            className="flex items-center gap-3 hover:text-indigo-500 transition"
-          >
-            <FaEnvelope /> <span>prajwalingole280@gmail.com</span>
-          </a>
-          <a
-            href="https://linkedin.com/in/prajwal-ingole-948b25180"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 hover:text-indigo-500 transition"
-          >
-            <FaLinkedin />{" "}
-            <span>linkedin.com/in/prajwal-ingole-948b25180</span>
-          </a>
-        </div>
-      </motion.div>
+  className="bg-gray-200/10 dark:bg-gray-800/30 p-8 rounded-2xl transition-colors duration-500"
+  initial={{ x: -20, opacity: 0 }}
+  whileInView={{ x: 0, opacity: 1 }}
+  transition={{ duration: 0.6 }}
+>
+  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+    Let's grab a chai and build something
+  </h3>
+  <p className="mt-3 text-gray-700 dark:text-gray-300">
+    If you have an idea, a project, or just want to chat over a virtual
+    chai ☕, drop me a message. I’ll get back to you within a few days!
+  </p>
 
+  {/* Contact Info Cards */}
+  <div className="mt-6 grid gap-4">
+    {/* Email */}
+    <a
+      href="mailto:prajwalingole280@gmail.com"
+      className="flex items-center gap-3 p-3 bg-gray-100/20 dark:bg-gray-700/30 rounded-xl hover:bg-gray-100/30 dark:hover:bg-gray-700/50 transition"
+    >
+      <FaEnvelope className="text-indigo-500 text-lg" />
+      <span className="text-gray-800 dark:text-gray-200">
+        prajwalingole280@gmail.com
+      </span>
+    </a>
+
+    {/* LinkedIn */}
+    <a
+      href="https://linkedin.com/in/prajwal-ingole"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-3 p-3 bg-gray-100/20 dark:bg-gray-700/30 rounded-xl hover:bg-gray-100/30 dark:hover:bg-gray-700/50 transition"
+    >
+      <FaLinkedin className="text-blue-500 text-lg" />
+      <span className="text-gray-800 dark:text-gray-200">
+        linkedin.com/in/prajwal-ingole
+      </span>
+    </a>
+
+    {/* Location */}
+    <div className="flex items-center gap-3 p-3 bg-gray-100/20 dark:bg-gray-700/30 rounded-xl">
+      📍
+      <span className="text-gray-800 dark:text-gray-200">Nagpur, India</span>
+    </div>
+
+    {/* Phone */}
+    <a
+      href="tel:+919975239057"
+      className="flex items-center gap-3 p-3 bg-gray-100/20 dark:bg-gray-700/30 rounded-xl hover:bg-gray-100/30 dark:hover:bg-gray-700/50 transition"
+    >
+      📞
+      <span className="text-gray-800 dark:text-gray-200">+91 997-523-9057</span>
+    </a>
+  </div>
+</motion.div>
+
+
+      {/* Right Contact Form */}
       <motion.form
         onSubmit={handleSubmit}
         className="bg-gray-200/10 dark:bg-gray-800/30 p-6 rounded-2xl flex flex-col gap-4 transition-colors duration-500"
