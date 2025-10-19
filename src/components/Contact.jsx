@@ -25,62 +25,65 @@ export default function Contact() {
     >
       {/* Left Contact Card */}
       <motion.div
-  className="bg-gray-200/10 dark:bg-gray-800/30 p-8 rounded-2xl transition-colors duration-500"
-  initial={{ x: -20, opacity: 0 }}
-  whileInView={{ x: 0, opacity: 1 }}
-  transition={{ duration: 0.6 }}
->
-  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-    Let's grab a chai and build something
-  </h3>
-  <p className="mt-3 text-gray-700 dark:text-gray-300">
-    If you have an idea, a project, or just want to chat over a virtual
-    chai ☕, drop me a message. I’ll get back to you within a few days!
-  </p>
+        className="bg-gray-200/10 dark:bg-gray-800/30 p-8 rounded-2xl transition-colors duration-500"
+        initial={{ x: -20, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+          Let's grab a chai and build something
+        </h3>
+        <p className="mt-3 text-gray-700 dark:text-gray-300">
+          If you have an idea, a project, or just want to chat over a virtual
+          chai ☕, drop me a message. I’ll get back to you within a few days!
+        </p>
 
-  {/* Contact Info Cards */}
-  <div className="mt-6 grid gap-4">
-    {/* Email */}
-    <a
-      href="mailto:prajwalingole280@gmail.com"
-      className="flex items-center gap-3 p-3 bg-gray-100/20 dark:bg-gray-700/30 rounded-xl hover:bg-gray-100/30 dark:hover:bg-gray-700/50 transition"
-    >
-      <FaEnvelope className="text-indigo-500 text-lg" />
-      <span className="text-gray-800 dark:text-gray-200">
-        prajwalingole280@gmail.com
-      </span>
-    </a>
+        {/* Contact Info Cards */}
+        <div className="mt-6 grid gap-4">
+          {/* Email */}
+          <a
+            href="mailto:prajwalingole280@gmail.com"
+            className="flex items-center gap-3 p-3 bg-gray-100/20 dark:bg-gray-700/30 rounded-xl hover:bg-gray-100/30 dark:hover:bg-gray-700/50 transition"
+          >
+            <FaEnvelope className="text-indigo-500 text-lg" />
+            <span className="text-gray-800 dark:text-gray-200">
+              prajwalingole280@gmail.com
+            </span>
+          </a>
 
-    {/* LinkedIn */}
-    <a
-      href="https://linkedin.com/in/prajwal-ingole"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-3 p-3 bg-gray-100/20 dark:bg-gray-700/30 rounded-xl hover:bg-gray-100/30 dark:hover:bg-gray-700/50 transition"
-    >
-      <FaLinkedin className="text-blue-500 text-lg" />
-      <span className="text-gray-800 dark:text-gray-200">
-        linkedin.com/in/prajwal-ingole
-      </span>
-    </a>
+          {/* LinkedIn */}
+          <a
+            href="https://linkedin.com/in/prajwal-ingole"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 p-3 bg-gray-100/20 dark:bg-gray-700/30 rounded-xl hover:bg-gray-100/30 dark:hover:bg-gray-700/50 transition"
+          >
+            <FaLinkedin className="text-blue-500 text-lg" />
+            <span className="text-gray-800 dark:text-gray-200">
+              linkedin.com/in/prajwal-ingole
+            </span>
+          </a>
 
-    {/* Location */}
-    <div className="flex items-center gap-3 p-3 bg-gray-100/20 dark:bg-gray-700/30 rounded-xl">
-      📍
-      <span className="text-gray-800 dark:text-gray-200">Nagpur, India</span>
-    </div>
+          {/* Location */}
+          <div className="flex items-center gap-3 p-3 bg-gray-100/20 dark:bg-gray-700/30 rounded-xl">
+            📍
+            <span className="text-gray-800 dark:text-gray-200">
+              Nagpur, India
+            </span>
+          </div>
 
-    {/* Phone */}
-    <a
-      href="tel:+919975239057"
-      className="flex items-center gap-3 p-3 bg-gray-100/20 dark:bg-gray-700/30 rounded-xl hover:bg-gray-100/30 dark:hover:bg-gray-700/50 transition"
-    >
-      📞
-      <span className="text-gray-800 dark:text-gray-200">+91 997-523-9057</span>
-    </a>
-  </div>
-</motion.div>
-
+          {/* Phone */}
+          <a
+            href="tel:+919975239057"
+            className="flex items-center gap-3 p-3 bg-gray-100/20 dark:bg-gray-700/30 rounded-xl hover:bg-gray-100/30 dark:hover:bg-gray-700/50 transition"
+          >
+            📞
+            <span className="text-gray-800 dark:text-gray-200">
+              +91 997-523-9057
+            </span>
+          </a>
+        </div>
+      </motion.div>
 
       {/* Right Contact Form */}
       <motion.form
@@ -99,7 +102,9 @@ export default function Contact() {
           required
         />
 
-        <label className="text-sm text-gray-700 dark:text-gray-300">Email</label>
+        <label className="text-sm text-gray-700 dark:text-gray-300">
+          Email
+        </label>
         <input
           name="email"
           value={form.email}
@@ -108,7 +113,9 @@ export default function Contact() {
           required
         />
 
-        <label className="text-sm text-gray-700 dark:text-gray-300">Message</label>
+        <label className="text-sm text-gray-700 dark:text-gray-300">
+          Message
+        </label>
         <textarea
           name="message"
           value={form.message}

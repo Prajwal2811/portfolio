@@ -2,6 +2,19 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const projects = [
+  
+  {
+    title: "B2B Lead Generation",
+    description: "Lead generation platform with React.js frontend and Node.js backend, including CRM API integration and admin dashboard.",
+    link: "https://buzzberry.store",
+    tech: ["React.js", "Node.js", "REST API"],
+  },
+  {
+    title: "QuickEats",
+    description: "AI-powered Restaurant Web App with voice assistant, menu browsing, category filters, and cart functionality.",
+    link: "https://quickeats-github-io-jdvt.vercel.app/",
+    tech: ["React.js", "Tailwind CSS", "Voice Recognition API"],
+  },
   {
     title: "RentUp",
     description: "Property Rental Platform with React.js, advanced search, filters, booking workflow, and responsive UI.",
@@ -25,14 +38,9 @@ const projects = [
     description: "eCommerce web app with React.js frontend and Node.js backend featuring product catalog, cart, and secure checkout.",
     link: "https://myshop-ecommerce-github-io.vercel.app/",
     tech: ["React.js", "Node.js", "Bootstrap 5"],
-  },
-  {
-    title: "B2B Lead Generation",
-    description: "Lead generation platform with React.js frontend and Node.js backend, including CRM API integration and admin dashboard.",
-    link: "https://buzzberry.store",
-    tech: ["React.js", "Node.js", "REST API"],
-  },
+  }
 ];
+
 
 export default function Projects() {
   return (
