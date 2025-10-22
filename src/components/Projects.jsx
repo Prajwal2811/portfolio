@@ -12,7 +12,7 @@ const projects = [
   {
     title: "QuickEats",
     description: "AI-powered Restaurant Web App with voice assistant, menu browsing, category filters, and cart functionality.",
-    link: "https://quickeats-github-io-jdvt.vercel.app/",
+    link: "https://quickeats-frontend-ten.vercel.app/",
     tech: ["React.js", "Tailwind CSS", "Voice Recognition API"],
   },
   {
